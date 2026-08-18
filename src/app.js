@@ -2,7 +2,7 @@ import express from "express";
 
 import { authRoute } from "/src/routes/authRoute.js";
 
-//import { protectedRoute } from "/src/routes/protectedRoute.js";
+import { protectedRoute } from "/src/routes/protectedRoute.js";
 
 export const app = express();
 // Node js core Middle ware used to convert JSON to Javascript object
@@ -10,4 +10,5 @@ export const app = express();
 app.use(express.json());
 
 app.use("/auth", authRoute);
+app.use("/dashboard", protectedRoute);
 //app.get("/dashboard", protectedRoute);
