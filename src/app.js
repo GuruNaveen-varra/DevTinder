@@ -1,6 +1,6 @@
 import express from "express";
 
-//import { authRoute } from "/src/routes/authRoute.js";
+import { authRoute } from "/src/routes/authRoute.js";
 
 //import { protectedRoute } from "/src/routes/protectedRoute.js";
 
@@ -9,5 +9,5 @@ export const app = express();
 
 app.use(express.json());
 
-//app.get("/auth", authRoute);
+app.use("/auth", authRoute);
 //app.get("/dashboard", protectedRoute);
