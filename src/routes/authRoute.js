@@ -4,6 +4,7 @@ import {
   resetpassword,
   retreiveUsername,
 } from "../Controllers/authController.js";
+
 import express from "express";
 export const authRoute = express.Router();
 
